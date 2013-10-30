@@ -1,0 +1,26 @@
+{
+	"installed_packages":
+	[
+		"BracketHighlighter",
+		"Clipboard Manager",
+		"Codecs33",
+		"ConvertToUTF8",
+		"CTags",
+		"Emmet",
+		"GoSublime",
+		"Goto-CSS-Declaration",
+		"JsFormat",
+		"JSHint Gutter",
+		"MacTerminal",
+		"Markdown Preview",
+		"Nodejs",
+		"Python PEP8 Autoformat",
+		"SCSS",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"SublimeCodeIntel",
+		"sublimelint",
+		"Tag",
+		"Theme - Sodarized"
+	]
+}
