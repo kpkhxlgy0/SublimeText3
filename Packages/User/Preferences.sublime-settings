@@ -3,7 +3,8 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"Nodejs"
 	],
 	"open_files_in_new_window": false,
 	"rulers":
@@ -11,5 +12,6 @@
 		80
 	],
 	"theme": "Sodarized Dark.sublime-theme",
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"draw_white_space": "selection",
 }
