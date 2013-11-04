@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).tmTheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
 	"font_size": 14,
 	"ignored_packages":
 	[
@@ -11,7 +11,7 @@
 	[
 		80
 	],
-	"theme": "Sodarized Dark.sublime-theme",
+	"theme": "Sodarized Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"draw_white_space": "selection",
 }
