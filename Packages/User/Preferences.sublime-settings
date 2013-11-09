@@ -1,18 +1,20 @@
 {
 	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).tmTheme",
+	"default_line_ending": "unix",
 	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
 	"font_size": 14,
-	"ignored_packages": [
+	"ignored_packages":
+	[
 		"Nodejs",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
-	"rulers": [
+	"rulers":
+	[
 		80
 	],
 	"theme": "Sodarized Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"default_line_ending": "unix",
-	"trim_trailing_white_space_on_save": true,
-	"ensure_newline_at_eof_on_save": true,
+	"trim_trailing_white_space_on_save": true
 }
