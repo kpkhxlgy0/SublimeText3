@@ -11,5 +11,6 @@
   "trailing": true,
   "undef": true,
   "unused": true,
-  "predef": ["require"]
+  "predef": ["require"],
+  "maxlen": 80
 }
