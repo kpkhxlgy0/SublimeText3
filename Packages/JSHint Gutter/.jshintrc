@@ -4,7 +4,7 @@
   // Documentation: http://www.jshint.com/docs/
   "browser": true,
   "esnext": true,
-  "globals": {"cc":true,"gl":true,"sys":true,"cch":true},
+  "globals": {"cc":true,"gl":true,"sys":true,"ccs":true,"cch":true},
   "globalstrict": false,
   "quotmark": true,
   "smarttabs": true,
