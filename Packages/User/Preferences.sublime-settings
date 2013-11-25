@@ -6,9 +6,9 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"GitGutter",
 		"Vintage",
-		"Nodejs"
+		"Nodejs",
+		"GitGutter"
 	],
 	"open_files_in_new_window": false,
 	"rulers":
