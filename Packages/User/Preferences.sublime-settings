@@ -6,10 +6,10 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Vintage",
+		"Markdown Preview",
 		"GitGutter",
-		"Nodejs",
-		"Markdown Preview"
+		"Vintage",
+		"Nodejs"
 	],
 	"open_files_in_new_window": false,
 	"rulers":
