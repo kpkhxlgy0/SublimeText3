@@ -6,10 +6,17 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Markdown Preview",
-		"GitGutter",
+		"Nodejs",
 		"Vintage",
-		"Nodejs"
+		"MacTerminal",
+		"GitGutter",
+		"ConvertToUTF8",
+		"FTPSync",
+		"Markdown Preview",
+		"JSHint Gutter",
+		"JsFormat",
+		"FileDiffs",
+		"SublimeLinter"
 	],
 	"open_files_in_new_window": false,
 	"rulers":
