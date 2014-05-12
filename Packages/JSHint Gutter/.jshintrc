@@ -4,13 +4,11 @@
   // Documentation: http://www.jshint.com/docs/
   "browser": true,
   "esnext": true,
-  "globals": {"cc":true,"gl":true,"sys":true,"ccs":true,"cch":true},
-  "globalstrict": false,
+  "globals": {},
+  "globalstrict": true,
   "quotmark": true,
   "smarttabs": true,
   "trailing": true,
   "undef": true,
-  "unused": true,
-  "predef": ["require"],
-  "maxlen": 80
+  "unused": true
 }

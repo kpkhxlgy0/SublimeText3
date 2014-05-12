@@ -26,6 +26,7 @@
 		"SublimeCodeIntel",
 		"sublimelint",
 		"SublimeLinter",
+		"SublimeLinter-jshint",
 		"Tag",
 		"Theme - Sodarized"
 	]
