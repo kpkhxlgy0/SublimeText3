@@ -29,7 +29,7 @@
   function getUserHome() {
     return process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE;
   }
-  function getOptions(file) {
+  function parseOptions(file) {
     try {
       require("jsonminify");
       return JSON.parse(JSON.minify(fs.readFileSync(file, "utf8")));
@@ -37,14 +37,18 @@
       return Object.create(null);
     }
   }
-  function setOptions(file, optionsStore, globalsStore) {
-    var obj = getOptions(file);
+  function setOptions(file, isPackageJSON, optionsStore, globalsStore) {
+    var obj = parseOptions(file);
+
     // Handle jshintConfig on package.json (NPM) files
-    if (obj.jshintConfig) {
-      obj = obj.jshintConfig;
-    } else if (obj.name) { // Skip the rest if NPM without jshintConfig
-      return false;
+    if (isPackageJSON) {
+      if (obj.jshintConfig) {
+        obj = obj.jshintConfig;
+      } else {
+        return;
+      }
     }
+
     for (var key in obj) {
       var value = obj[key];
       // Globals are defined as an object, with keys as names, and a boolean
@@ -76,8 +80,6 @@
   var pluginFolder = path.dirname(__dirname);
   var sourceFolder = path.dirname(filePath);
   var jshintrcPath;
-  var lastSourceFolder;
-  var jshintrcPath;
   var packagejsonPath;
 
   // Older versions of node has `existsSync` in the path module, not fs. Meh.
@@ -86,7 +88,7 @@
 
   // Try and get some persistent options from the plugin folder.
   if (fs.existsSync(jshintrcPath = pluginFolder + path.sep + jshintrc)) {
-    setOptions(jshintrcPath, options, globals);
+    setOptions(jshintrcPath, false, options, globals);
   }
 
   // When a JSHint config file exists in the same directory as the source file,
@@ -104,10 +106,16 @@
 
   pathsToLook.some(function(pathToLook) {
     if (fs.existsSync(jshintrcPath = path.join(pathToLook, jshintrc))) {
-      setOptions(jshintrcPath, options, globals);
+      setOptions(jshintrcPath, false, options, globals);
+      return true;
+    }
+    if (fs.existsSync(packagejsonPath = path.join(pathToLook, packagejson))) {
+      setOptions(packagejsonPath, true, options, globals);
       return true;
     }
   });
+
+  log("Using JSHint options: " + JSON.stringify(options));
 
   // Read the source file and, when done, lint the code.
   fs.readFile(tempPath, "utf8", function(err, data) {
