@@ -45,7 +45,7 @@
       if (obj.jshintConfig) {
         obj = obj.jshintConfig;
       } else {
-        return;
+        return false;
       }
     }
 
@@ -53,7 +53,7 @@
       var value = obj[key];
       // Globals are defined as an object, with keys as names, and a boolean
       // value to determine if they are assignable.
-      if (key == "global" || key == "globals" || key == "predef") {
+      if (key == "globals" || key == "predef") {
         if (value instanceof Array) {
           value.forEach(function(name) {
             globalsStore[name] = true;
@@ -73,6 +73,9 @@
         }
       }
     }
+
+    // Options were set successfully.
+    return true;
   }
 
   var jshintrc = ".jshintrc";
@@ -106,16 +109,15 @@
 
   pathsToLook.some(function(pathToLook) {
     if (fs.existsSync(jshintrcPath = path.join(pathToLook, jshintrc))) {
-      setOptions(jshintrcPath, false, options, globals);
-      return true;
+      return setOptions(jshintrcPath, false, options, globals);
     }
     if (fs.existsSync(packagejsonPath = path.join(pathToLook, packagejson))) {
-      setOptions(packagejsonPath, true, options, globals);
-      return true;
+      return setOptions(packagejsonPath, true, options, globals);
     }
   });
 
-  log("Using JSHint options: " + JSON.stringify(options));
+  log("Using JSHint globals: " + JSON.stringify(globals));
+  log("Using JSHint options: " + JSON.stringify(options, null, 2));
 
   // Read the source file and, when done, lint the code.
   fs.readFile(tempPath, "utf8", function(err, data) {
