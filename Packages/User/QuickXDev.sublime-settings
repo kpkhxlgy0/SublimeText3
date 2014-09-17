@@ -1,0 +1,10 @@
+{
+    // must set the path
+    "quick_cocos2dx_root": "/Users/hxl/Documents/workspace/cocos-engine/quick-cocos2d-x-2.2.5",
+    // lua template attributes
+    "date_format": "%Y-%m-%d %H:%M:%S",
+    // i.e. peter or peter (peter@gmail.com)
+    "author": "HXL",
+    // compile_scripts encrypt key,no encrypt when empty
+    "compile_scripts_key": ""
+}
