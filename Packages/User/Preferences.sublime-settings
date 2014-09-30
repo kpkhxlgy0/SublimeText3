@@ -6,6 +6,8 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
+		"JSHint Gutter",
+		"Python PEP8 Autoformat",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
