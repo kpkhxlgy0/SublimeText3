@@ -1,7 +1,7 @@
 {
     // must set the path
     "quick_cocos2dx_root": "/Users/youzu/Documents/quick-3.3rc0",
-    "cocos2dx_root": "Users/youzu/Documents/workspace/code/cocos-engine/cocos2d-x",
+    "cocos2dx_root": "E:\\workspace\\svn\\COCOS\\quick-x_2.2.2\\lib_2_2\\cocos2d-x",
     // lua template attributes
     "date_format": "%Y-%m-%d %H:%M:%S",
     // i.e. peter or peter (peter@gmail.com)
