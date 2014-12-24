@@ -1,4 +1,9 @@
 {
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"BracketHighlighter",
@@ -17,6 +22,7 @@
 		"JSHint Gutter",
 		"MacTerminal",
 		"Markdown Preview",
+		"Package Control",
 		"PackageResourceViewer",
 		"Python PEP8 Autoformat",
 		"QuickXDev",
